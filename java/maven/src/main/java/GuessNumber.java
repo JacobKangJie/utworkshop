@@ -6,15 +6,18 @@ import java.util.Set;
  */
 public class GuessNumber {
     public String getTips(String gus, String ans) {
+        int acount = 0;
         int bcount = 0;
-        if (gus.equals(ans)){
-            return "4A0B";
+        for (int i = 0; i < ans.length(); i++) {
+            if (gus.charAt(i) == ans.charAt(i)){
+                acount += 1;
+            }
         }
         for (int i = 0; i < ans.length(); i++) {
             if (ans.contains(String.valueOf(gus.charAt(i)))){
                 bcount += 1;
             }
         }
-        return "0A"+bcount+"B";
+        return acount+"A"+(bcount-acount)+"B";
     }
 }
