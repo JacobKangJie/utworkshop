@@ -1,9 +1,6 @@
-import com.sun.imageio.plugins.common.BogusColorSpace;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by jiekang on 1/31/15.
