@@ -10,6 +10,7 @@ import static org.mockito.Mockito.when;
  */
 public class GuessNumberTest {
 
+
     @Test
     public void should_return_0A0B_when_getTips_gives_input_5678_and_answer_is_1234(){
         GuessNumber gn = new GuessNumber();
@@ -18,10 +19,19 @@ public class GuessNumberTest {
     }
 
     @Test
-    public void should_return_0A4B_when_getTips_given_input_is_1234_and_answer_is_1234(){
+    public void should_return_4A0B_when_getTips_given_input_is_1234_and_answer_is_1234(){
         GuessNumber gn = new GuessNumber();
         String result = gn.getTips("1234","1234");
-        assertThat(result).isEqualTo("0A4B");
+        assertThat(result).isEqualTo("4A0B");
     }
 
+    @Test
+    public void should_return_0A4B_when_getTips_given_input_is_1234_and_answer_is_4321(){
+        GuessNumber gn = new GuessNumber();
+        String result = gn.getTips("1234","4321");
+        assertThat(result).isEqualTo("0A4B");
+    }
+    
+    @Test
+    public void should_return__when__given_input_is__and_answer_is_
 }
